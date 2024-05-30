@@ -1,5 +1,6 @@
 import request from "supertest";
-import app from "../src/index";
+import app from "../src/app";
+
 describe("GET /ping", () => {
   it("responds with JSON message 'pong'", async () => {
     const response = await request(app).get("/ping");
