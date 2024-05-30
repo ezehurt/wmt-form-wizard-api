@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node build/index.js",
     "build": "tsc",
-    "test": "jest",
+    "test": "jest --testPathPattern=build",
+    "test:watch": "jest --watch --testPathPattern=src",
     "predev": "npm run swagger",
     "prebuild": "npm run swagger",
     "dev": "concurrently \"nodemon\" \"nodemon -x tsoa spec\"",
